@@ -12,3 +12,4 @@ def character_update(CHARACTER, data):
     CHARACTER.update(data)
     print("Character updated:", CHARACTER)
     return CHARACTER
+
