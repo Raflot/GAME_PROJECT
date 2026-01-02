@@ -12,6 +12,7 @@ def main():
     gound_creation(nb_players,map_seed,size,list_nation_elements,caracteristique_topographique) #Affichage de la carte. nouvelle_map(y/n)
 
     #Player's turn
-
+    Lanceur_partie() #sortie: [Tours,
+    Formulaire_tours_jeu_player
 
     #IA's turn

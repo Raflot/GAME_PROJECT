@@ -1,0 +1,42 @@
+# coding: utf-8
+
+"""
+Docstring for GAME_PROJECT.user_interface
+
+RSS:
+https://python.19633.com/fr/GUI/Tkinter/1001015910.html
+https://python.doctor/page-tkinter-interface-graphique-python-tutoriel
+https://www.pythontutorial.net/tkinter/tkinter-labelframe/
+https://www.delftstack.com/fr/tutorial/tkinter-tutorial/tkinter-geometry-managers/
+https://lecoursgratuit.com/tkinter-entry-get-value-manipulation-astuces-et-cas-particuliers/
+"""
+
+from tkinter import*
+size_fenetre = '300x300'
+
+
+def GameSetupForm():
+    fenetre = Tk()
+    fenetre.geometry(size_fenetre)
+    fenetre.resizable(False, False)
+    fenetre.title('GAME SETUP FORM')
+
+    # Name
+    value = StringVar() 
+    value.set("Name")
+    entree = Entry(fenetre, textvariable=str, width=30)
+    entree.pack()
+
+    # Nation 
+    liste = Listbox(fenetre)
+    liste.insert(1, "Nation 1")
+    liste.insert(2, "Nation 2")
+    liste.insert(3, "Nation 3")
+    liste.pack()
+
+    bouton=Button(fenetre, text="Fermer", command=fenetre.quit)
+    bouton.pack()
+
+    fenetre.mainloop()
+
+GameSetupForm()
