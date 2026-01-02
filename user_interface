@@ -27,16 +27,25 @@ def GameSetupForm():
     entree = Entry(fenetre, textvariable=str, width=30)
     entree.pack()
 
-    # Nation 
-    liste = Listbox(fenetre)
+    # Nation
+    nation=[]
+    liste = Listbox(fenetre, width=40, height=10, selectmode=SINGLE, 
+                    activestyle=NONE, 
+                    selectforeground="#fbc6a0",
+                    selectbackground="#640042",
+                    selectborderwidth=5)
     liste.insert(1, "Nation 1")
     liste.insert(2, "Nation 2")
     liste.insert(3, "Nation 3")
+    for i in liste.curselection():
+        nation=nation+liste.get(i)
     liste.pack()
 
     bouton=Button(fenetre, text="Fermer", command=fenetre.quit)
     bouton.pack()
 
     fenetre.mainloop()
+    name=entree.get()
+    return([name,nation])   
 
-GameSetupForm()
+print(GameSetupForm())
